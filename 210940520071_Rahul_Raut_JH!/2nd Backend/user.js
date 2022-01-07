@@ -14,7 +14,7 @@ async function addmsg() {
     const Connection = mysql.createConnection(dbc);
     await Connection.connectAsync();
     console.log("sdafa");
-    let sql = 'insert into ss (message) values(?)';
+    let sql = 'insert into user (message) values(?)';
 
     await Connection.queryAsync(sql, [user.message]);
 
@@ -27,7 +27,7 @@ async function getmsg() {
     const Connection = mysql.createConnection(dbc);
     await Connection.connectAsync();
     console.log("sdafa");
-    let sql = 'select * from ss';
+    let sql = 'select * from user';
 
     const list = await Connection.queryAsync(sql, []);
 
